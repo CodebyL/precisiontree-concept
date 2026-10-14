@@ -161,6 +161,7 @@ nav.main a:hover::after,nav.main a[aria-current]::after{transform:scaleX(1)}
 .rc blockquote{margin-top:12px;color:#3C4A41;font-size:15.5px}
 @media (prefers-reduced-motion:no-preference){.rrow{animation:mq 50s linear infinite}.rv .viewport:hover .rrow{animation-play-state:paused}}
 @keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.rv .viewport{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-mask-image:none;mask-image:none;padding-inline:max(16px,calc((100vw - 1180px)/2));scroll-padding-inline:max(16px,calc((100vw - 1180px)/2))}.rrow .set[aria-hidden]{display:none}.rc{scroll-snap-align:start}}
 .rv .foot{display:flex;justify-content:center;margin-top:26px}
 
 /* impact */
@@ -269,14 +270,14 @@ footer h4{font-size:18px;margin-bottom:10px}
 @media (max-width:640px){
  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
  .util .hide-s{display:none}
- .logo small{display:none}.logo b{font-size:20px}
+ .logo small{display:none}
  .sec{padding-block:72px}
  .hero h1{font-size:48px}
  .tiles{grid-template-columns:1fr 1fr}
  .hphoto{height:380px}
  .hphoto .chip{bottom:90px}
  .arc{grid-template-columns:repeat(2,1fr);gap:10px}.arc figure:nth-child(n+5){display:none}
- .logo b{white-space:nowrap}
+ header.top .wrap{gap:10px}.logo .mk{width:40px;height:40px}.logo b{font-size:18px;white-space:nowrap}.hcall .ic{width:42px;height:42px}.menubtn{padding:0 12px}
  .scomp{grid-template-columns:1fr}
  .tallph .im{aspect-ratio:4/3}.seal{right:12px;bottom:-24px;width:100px;height:100px}
  .sright{grid-template-columns:1fr}
